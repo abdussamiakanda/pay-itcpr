@@ -82,15 +82,16 @@ const Dashboard = () => {
           title: 'Cash Payment',
           instructions: [
             'Cash payments can be made in person',
-            'Please contact us to arrange a meeting',
+            'Please contact us at tmalakar@mail.itcpr.org to arrange a meeting',
             'Always request a receipt for cash payments',
           ],
         },
         Other: {
           title: 'Other Payment Method',
           instructions: [
-            'Please contact us for alternative payment arrangements',
+            'Please contact us at tmalakar@mail.itcpr.org for alternative payment arrangements',
             'We accept various payment methods based on your location',
+
           ],
         },
       },
@@ -101,7 +102,7 @@ const Dashboard = () => {
             `Send payment to: ${import.meta.env.VITE_BKASH_NUMBER || '[Your bKash Number]'}`,
             `Include reference: ${userEmail}`,
             'Please wait for payment processing after sending',
-            'If you forgot to include the reference, contact: tmalakar@mail.itcpr.org',
+            'If you forgot to include the reference, contact us at majasem@mail.itcpr.org',
           ],
         },
         Nagad: {
@@ -110,7 +111,7 @@ const Dashboard = () => {
             `Send payment to: ${import.meta.env.VITE_NAGAD_NUMBER || '[Your Nagad Number]'}`,
             `Include reference: ${userEmail}`,
             'Please wait for payment processing after sending',
-            'If you forgot to include the reference, contact: tmalakar@mail.itcpr.org',
+            'If you forgot to include the reference, contact us at majasem@mail.itcpr.org',
           ],
         },
         Rocket: {
@@ -119,7 +120,7 @@ const Dashboard = () => {
             `Send payment to: ${import.meta.env.VITE_ROCKET_NUMBER || '[Your Rocket Number]'}`,
             `Include reference: ${userEmail}`,
             'Please wait for payment processing after sending',
-            'If you forgot to include the reference, contact: tmalakar@mail.itcpr.org',
+            'If you forgot to include the reference, contact us at majasem@mail.itcpr.org',
           ],
         },
         'Bank Transfer': {
@@ -131,21 +132,21 @@ const Dashboard = () => {
             `Branch: ${import.meta.env.VITE_BANK_BRANCH_BDT || '[Branch Name]'}`,
             `Include reference: ${userEmail}`,
             'Please wait for payment processing after sending',
-            'If you forgot to include the reference, contact: tmalakar@mail.itcpr.org',
+            'If you forgot to include the reference, contact us at majasem@mail.itcpr.org',
           ],
         },
         Cash: {
           title: 'Cash Payment',
           instructions: [
             'Cash payments can be made in person',
-            'Please contact us to arrange a meeting',
+            'Please contact us at majasem@mail.itcpr.org to arrange a meeting',
             'Always request a receipt for cash payments',
           ],
         },
         Other: {
           title: 'Other Payment Method',
           instructions: [
-            'Please contact us for alternative payment arrangements',
+            'Please contact us at majasem@mail.itcpr.org for alternative payment arrangements',
             'We accept various payment methods based on your location',
           ],
         },
