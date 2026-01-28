@@ -10,6 +10,11 @@ export const useAuth = () => {
     const [isStaff, setIsStaff] = useState(false);
 
     useEffect(() => {
+        // Safety: stop loading after 10s if Firebase never responds (e.g. network/blocked)
+        const fallbackTimer = setTimeout(() => {
+            setLoading(false);
+        }, 10000);
+
         const unsubscribe = onAuthStateChanged(auth, async (firebaseUser) => {
             if (firebaseUser) {
                 setUser(firebaseUser);
@@ -36,7 +41,10 @@ export const useAuth = () => {
             setLoading(false);
         });
 
-        return () => unsubscribe();
+        return () => {
+            clearTimeout(fallbackTimer);
+            unsubscribe();
+        };
     }, []);
 
     const signInWithSSO = async () => {

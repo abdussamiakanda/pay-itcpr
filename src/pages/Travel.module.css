@@ -1,0 +1,503 @@
+.page {
+  min-height: 100vh;
+  padding: 0;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.heroSection {
+  position: relative;
+  padding: var(--spacing-2xl) var(--spacing-xl);
+  background: linear-gradient(135deg, rgba(157, 157, 189, 0.1) 0%, rgba(137, 137, 169, 0.05) 100%);
+  border-bottom: 1px solid var(--border-color);
+  overflow: hidden;
+  margin-bottom: var(--spacing-2xl);
+}
+
+.heroContent {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--spacing-xl);
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 2;
+}
+
+.heroText {
+  flex: 1;
+  min-width: 0;
+}
+
+.heroTitle {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: var(--spacing-md);
+  line-height: 1.1;
+  color: var(--text-dark);
+  letter-spacing: -0.02em;
+}
+
+.gradientText {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.heroSubtitle {
+  font-size: 1.25rem;
+  color: var(--text-medium);
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.addButton {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-md) var(--spacing-lg);
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+  color: white;
+  border: none;
+  border-radius: var(--radius-lg);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(157, 157, 189, 0.35);
+  transition: var(--transition);
+}
+
+.addButton:hover {
+  box-shadow: 0 4px 12px rgba(157, 157, 189, 0.4);
+  transform: translateY(-1px);
+}
+
+.addButton .material-icons {
+  font-size: 20px;
+}
+
+.content {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-xl) var(--spacing-2xl);
+}
+
+.section {
+  background: var(--bg-main);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-xl);
+  padding: var(--spacing-2xl);
+  box-shadow: var(--shadow-sm);
+  margin-bottom: var(--spacing-xl);
+}
+
+.sectionTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: var(--spacing-lg);
+}
+
+.sectionSubtitle {
+  font-size: 1rem;
+  color: var(--text-medium);
+  line-height: 1.6;
+}
+
+/* Form – university-style */
+.formHeader {
+  margin-bottom: var(--spacing-xl);
+  padding-bottom: var(--spacing-lg);
+  border-bottom: 2px solid var(--border-color);
+}
+
+.formTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin: 0 0 var(--spacing-xs) 0;
+  letter-spacing: -0.02em;
+}
+
+.formRequiredNote {
+  font-size: 0.875rem;
+  color: var(--text-medium);
+  margin: 0;
+}
+
+.requiredAsterisk {
+  color: var(--error);
+  font-weight: 600;
+}
+
+.form {
+  margin-top: 0;
+}
+
+.formBlock {
+  margin-bottom: var(--spacing-2xl);
+  padding-bottom: var(--spacing-2xl);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.formBlock:last-of-type {
+  margin-bottom: var(--spacing-xl);
+  padding-bottom: var(--spacing-xl);
+  border-bottom: none;
+}
+
+.formBlockTitle {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin: 0 0 var(--spacing-lg) 0;
+  padding-bottom: var(--spacing-sm);
+  border-bottom: 1px solid var(--primary-lighter);
+}
+
+.formBlockTitle .material-icons {
+  font-size: 22px;
+  color: var(--primary);
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-lg);
+}
+
+.formGroup,
+.formGroupFull {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.formGroupFull {
+  grid-column: 1 / -1;
+}
+
+.formGroup label,
+.formGroupFull label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.helpText {
+  font-size: 0.8125rem;
+  color: var(--text-medium);
+  margin: 0 0 var(--spacing-xs) 0;
+  line-height: 1.4;
+}
+
+.formGroup input,
+.formGroup select,
+.formGroupFull input,
+.formGroupFull textarea {
+  padding: var(--spacing-sm) var(--spacing-md);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  font-size: 1rem;
+  background: var(--bg-main);
+  color: var(--text-dark);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.formGroup select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  padding-right: 2.75rem; /* room for chevron */
+  background-image:
+    linear-gradient(135deg, rgba(157, 157, 189, 0.06) 0%, rgba(137, 137, 169, 0.04) 100%),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M7 10l5 5 5-5' stroke='%236b6b8e' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat, no-repeat;
+  background-position: 0 0, right 0.9rem center;
+  background-size: 100% 100%, 18px 18px;
+}
+
+/* Hide the default arrow on old IE/Edge */
+.formGroup select::-ms-expand {
+  display: none;
+}
+
+.formGroup input:focus,
+.formGroup select:focus,
+.formGroupFull input:focus,
+.formGroupFull textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(157, 157, 189, 0.2);
+}
+
+.formGroupFull textarea {
+  min-height: 72px;
+  resize: vertical;
+}
+
+.formActions {
+  display: flex;
+  gap: var(--spacing-md);
+  justify-content: flex-end;
+  padding-top: var(--spacing-md);
+  margin-top: var(--spacing-md);
+  border-top: 1px solid var(--border-color);
+}
+
+.cancelButton {
+  padding: var(--spacing-sm) var(--spacing-lg);
+  background: transparent;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--text-medium);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.cancelButton:hover {
+  background: var(--bg-light);
+  border-color: var(--primary-light);
+  color: var(--primary-dark);
+}
+
+.submitButton {
+  padding: var(--spacing-sm) var(--spacing-lg);
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+  color: white;
+  border: none;
+  border-radius: var(--radius-md);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.submitButton:hover:not(:disabled) {
+  box-shadow: 0 2px 8px rgba(157, 157, 189, 0.35);
+}
+
+.submitButton:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* List */
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.card {
+  padding: var(--spacing-lg);
+  background: var(--bg-light);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  transition: var(--transition);
+}
+
+.card:hover {
+  border-color: var(--primary-light);
+  box-shadow: var(--shadow-sm);
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-md);
+  flex-wrap: wrap;
+  margin-bottom: var(--spacing-xs);
+}
+
+.cardTitle {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin: 0;
+}
+
+.statusBadge {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.statusDraft {
+  background: var(--gray-200);
+  color: var(--text-medium);
+}
+
+.statusSubmitted {
+  background: var(--warning-lighter);
+  color: var(--warning);
+}
+
+.statusApproved {
+  background: rgba(33, 150, 243, 0.15);
+  color: #1976d2;
+}
+
+.statusPaid {
+  background: var(--success-lighter);
+  color: var(--success);
+}
+
+.statusRejected {
+  background: var(--error-lighter);
+  color: var(--error);
+}
+
+.cardMeta {
+  font-size: 0.875rem;
+  color: var(--text-medium);
+  margin-bottom: var(--spacing-xs);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-xs);
+  align-items: center;
+}
+
+.cardMetaItem {
+  display: inline;
+}
+
+.cardFunding {
+  font-weight: 500;
+  color: var(--text-medium);
+}
+
+.cardFinance {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: var(--spacing-sm);
+}
+
+.cardFinance .material-icons {
+  font-size: 18px;
+  color: var(--primary);
+}
+
+.cardNotes {
+  font-size: 0.875rem;
+  color: var(--text-medium);
+  line-height: 1.5;
+  margin: 0 0 var(--spacing-sm) 0;
+}
+
+.cardActions {
+  margin-top: var(--spacing-md);
+  padding-top: var(--spacing-md);
+  border-top: 1px solid var(--border-color);
+}
+
+.submitForApprovalButton {
+  padding: var(--spacing-sm) var(--spacing-md);
+  background: var(--primary-lighter);
+  color: var(--primary-dark);
+  border: 1px solid var(--primary-light);
+  border-radius: var(--radius-md);
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.submitForApprovalButton:hover:not(:disabled) {
+  background: var(--primary);
+  color: white;
+  border-color: var(--primary);
+}
+
+.submitForApprovalButton:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.loading,
+.empty {
+  color: var(--text-medium);
+  padding: var(--spacing-xl);
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .heroTitle {
+    font-size: 2.25rem;
+  }
+  .heroSubtitle {
+    font-size: 1rem;
+  }
+  .heroContent {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .addButton {
+    width: 100%;
+    justify-content: center;
+  }
+  .content {
+    padding: 0 var(--spacing-md) var(--spacing-xl);
+  }
+  .section {
+    padding: var(--spacing-xl);
+  }
+  .formHeader {
+    margin-bottom: var(--spacing-lg);
+    padding-bottom: var(--spacing-md);
+  }
+  .formTitle {
+    font-size: 1.25rem;
+  }
+  .formGrid {
+    grid-template-columns: 1fr;
+  }
+  .formBlock {
+    margin-bottom: var(--spacing-xl);
+    padding-bottom: var(--spacing-xl);
+  }
+  .formBlockTitle {
+    font-size: 1rem;
+  }
+  .formBlockTitle .material-icons {
+    font-size: 20px;
+  }
+  .helpText {
+    font-size: 0.875rem;
+  }
+  .formGroup input,
+  .formGroup select,
+  .formGroupFull input,
+  .formGroupFull textarea {
+    font-size: 16px; /* prevents iOS zoom */
+    padding: var(--spacing-md);
+  }
+  .formActions {
+    flex-direction: column-reverse;
+    gap: var(--spacing-sm);
+  }
+  .cancelButton,
+  .submitButton {
+    width: 100%;
+    justify-content: center;
+  }
+}

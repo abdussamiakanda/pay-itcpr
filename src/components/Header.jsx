@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { NavLink } from 'react-router-dom';
 import { useAuth } from '../hooks/useAuth';
 import styles from './Header.module.css';
 
@@ -30,13 +31,26 @@ const Header = () => {
         {/* Brand */}
         <div className={styles.brand}>
           <div className={styles.brandIcon}>
-            <span className="material-icons">account_balance_wallet</span>
+            <span className="material-icons">dashboard</span>
           </div>
           <div className={styles.brandText}>
             <h1 className={styles.brandTitle}>ITCPR</h1>
-            <span className={styles.brandSubtitle}>Payment Portal</span>
+            <span className={styles.brandSubtitle}>Account Portal</span>
           </div>
         </div>
+
+        {/* Nav */}
+        <nav className={styles.nav}>
+          <NavLink to="/payment" className={({ isActive }) => (isActive ? `${styles.navLink} ${styles.navLinkActive}` : styles.navLink)}>
+            Payment
+          </NavLink>
+          <NavLink to="/travel" className={({ isActive }) => (isActive ? `${styles.navLink} ${styles.navLinkActive}` : styles.navLink)}>
+            Travel
+          </NavLink>
+          <NavLink to="/scholarships" className={({ isActive }) => (isActive ? `${styles.navLink} ${styles.navLinkActive}` : styles.navLink)}>
+            Scholarships
+          </NavLink>
+        </nav>
 
         {/* User Menu */}
         <div className={styles.userMenu}>

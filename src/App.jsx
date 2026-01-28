@@ -4,17 +4,15 @@ import { useAuth } from './hooks/useAuth';
 import Login from './components/Login';
 import Layout from './components/Layout';
 import Dashboard from './pages/Dashboard';
+import Travel from './pages/Travel';
+import Scholarships from './pages/Scholarships';
 import LoadingOverlay from './components/LoadingOverlay';
 
 function App() {
-  const { user, loading, isStaff } = useAuth();
+  const { user, loading } = useAuth();
 
   if (loading) {
     return <LoadingOverlay />;
-  }
-
-  if (!user || !isStaff) {
-    return <Login />;
   }
 
   return (
@@ -50,12 +48,22 @@ function App() {
           v7_relativeSplatPath: true,
         }}
       >
-        <Layout>
+        {!user ? (
           <Routes>
-            <Route path="/" element={<Dashboard />} />
+            <Route path="/" element={<Login />} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
-        </Layout>
+        ) : (
+          <Layout>
+            <Routes>
+              <Route path="/" element={<Navigate to="/payment" replace />} />
+              <Route path="/payment" element={<Dashboard />} />
+              <Route path="/travel" element={<Travel />} />
+              <Route path="/scholarships" element={<Scholarships />} />
+              <Route path="*" element={<Navigate to="/payment" replace />} />
+            </Routes>
+          </Layout>
+        )}
       </Router>
     </>
   );

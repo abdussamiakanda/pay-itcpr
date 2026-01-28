@@ -25,10 +25,10 @@ const Login = () => {
         <div className={styles.loginHeader}>
           <div className={styles.navBrand}>
             <div>
-              <h1>ITCPR Payment Portal</h1>
+              <h1>ITCPR Account Portal</h1>
             </div>
           </div>
-          <p className={styles.loginSubtitle}>Sign in to access the payment system</p>
+          <p className={styles.loginSubtitle}>Sign in to access your account</p>
         </div>
         {error && (
           <div className={styles.errorMessage}>
